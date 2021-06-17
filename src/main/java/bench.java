@@ -9,15 +9,14 @@ import org.apache.commons.math3.distribution.ZipfDistribution;
 import org.apache.datasketches.frequencies.LongsSketch;
 
 import com.clearspring.analytics.stream.frequency.CountMinSketch;
-import com.google.common.math.DoubleMath;
 
 
 public class bench {
   
     public static void main(String[] args) {
-      int tot  = 100000000;
-      int epoch = Integer.parseInt(args[0]);
-      ZipfDistribution zipfDistribution = new ZipfDistribution(tot,Double.parseDouble(args[1]));
+      int tot  = Integer.parseInt(args[0]);
+      int epoch = Integer.parseInt(args[1]);
+      ZipfDistribution zipfDistribution = new ZipfDistribution(tot,Double.parseDouble(args[2]));
       List<Integer> l = new ArrayList<>();
       CountMinSketch cms = new CountMinSketch(0.001D,0.99D,1);
       int mapSize = 1024;
