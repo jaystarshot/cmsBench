@@ -11,7 +11,7 @@ import org.apache.datasketches.frequencies.LongsSketch;
 import com.clearspring.analytics.stream.frequency.CountMinSketch;
 
 
-public class bench {
+public class zipfbench {
   
     public static void main(String[] args) {
       int tot  = Integer.parseInt(args[0]);
