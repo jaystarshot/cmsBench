@@ -1,3 +1,4 @@
+package bench;
 
 import static java.lang.Math.round;
 
@@ -51,7 +52,7 @@ public class ndvBench {
       //    int ndv = 50;
       double tot = 500000;
   
-      for (int ndv = 1; ndv < tot / 100; ndv += 25) {
+      for (int ndv = 1; ndv < tot / 100; ndv += 75) {
     
         Map<Integer, test> m = new HashMap<>();
         TestCase<Long> testCase = TestCase.getDefaultLongData(ndv, (int) round(tot / ndv));
@@ -200,7 +201,7 @@ public class ndvBench {
       for (int i = 0; i < size; i++) {
         long k = r.nextInt(size);
         a.add(k);
-        f.put(k, (long) (r.nextInt(freq)));
+        f.put(k, 1+(long) (r.nextInt(freq)));
       }
       return f;
     }
